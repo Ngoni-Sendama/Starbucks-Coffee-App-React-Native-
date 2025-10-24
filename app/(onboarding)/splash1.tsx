@@ -1,23 +1,66 @@
-import { View, Text, Button, StyleSheet, Image } from "react-native";
 import { Link } from "expo-router";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function Splash1() {
   return (
     <View style={styles.container}>
-      {/* <Image source={require("../../assets/images/splash1.png")} style={styles.image} /> */}
-      <Image source={require("../../assets/images/splast1.gif")} style={styles.image} />
+      <Image
+        source={require("../../assets/images/splast1.gif")}
+        style={styles.image}
+      />
+
       <Text style={styles.title}>Welcome to Starbucks</Text>
-      <Text style={styles.subtitle}>Fresh coffee, made for you.</Text>
+      <Text style={styles.subtitle}>Fresh coffee, made just for you.</Text>
+
       <Link href="/(onboarding)/splash2" asChild>
-        <Button title="Next" />
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Next</Text>
+        </TouchableOpacity>
       </Link>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: "center", alignItems: "center" },
-  image: { width: 250, height: 250, marginBottom: 20 },
-  title: { fontSize: 28, fontWeight: "bold", marginBottom: 10 },
-  subtitle: { color: "#555", marginBottom: 20 },
+  container: {
+    flex: 1,
+    backgroundColor: "#f8f8f8", // Soft background
+    justifyContent: "center",
+    alignItems: "center",
+    paddingHorizontal: 30,
+  },
+  image: {
+    width: 260,
+    height: 260,
+    marginBottom: 40,
+  },
+  title: {
+    fontSize: 30,
+    fontWeight: "700",
+    color: "#1E3932", // Starbucks dark green
+    marginBottom: 8,
+    textAlign: "center",
+  },
+  subtitle: {
+    fontSize: 16,
+    color: "#6B705C", // Soft warm gray-green
+    marginBottom: 40,
+    textAlign: "center",
+  },
+  button: {
+    backgroundColor: "#00704A", // Starbucks green
+    paddingVertical: 14,
+    paddingHorizontal: 80,
+    borderRadius: 30,
+    elevation: 3, // subtle Android shadow
+    shadowColor: "#000", // iOS shadow
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 3,
+  },
+  buttonText: {
+    color: "#fff",
+    fontSize: 18,
+    fontWeight: "600",
+  },
 });

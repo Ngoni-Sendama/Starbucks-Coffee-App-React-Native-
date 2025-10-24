@@ -47,7 +47,7 @@ export default function Login() {
           style={styles.button}
           onPress={() => router.push("/(main)")}
         >
-          <LinearGradient colors={["#08d4c4", "#01ab9d"]} style={styles.signIn}>
+          <LinearGradient colors={["#00704A", "#0d8b61ff"]} style={styles.signIn}>
             <Text style={styles.textSign}>Login</Text>
             <MaterialIcons name="navigate-next" color="#fff" size={20} />
           </LinearGradient>
@@ -63,7 +63,7 @@ export default function Login() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#009387",
+    backgroundColor: "#00704A",
   },
   header: {
     flex: 1,
@@ -83,8 +83,8 @@ const styles = StyleSheet.create({
     height: 180,
   },
   title: {
-    color: "#05375a",
-    fontSize: 26,
+    color: "#00704A",
+    fontSize: 30,
     fontWeight: "bold",
     textAlign: "center",
     marginBottom: 10,
@@ -111,12 +111,13 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginRight: 5, // spacing before the icon
   },
-  link: { textAlign: "center", color: "#006241", marginTop: 10 },
+  link: { textAlign: "center", color: "#006241", marginTop: 15, fontSize: 18 },
   input: {
     borderWidth: 1,
     borderColor: "#ccc",
     borderRadius: 8,
-    padding: 10,
-    marginBottom: 10,
+    paddingHorizontal: 10,
+    paddingVertical: 15,
+    marginBottom: 25,
   },
 });

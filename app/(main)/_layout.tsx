@@ -1,7 +1,7 @@
 //  Bottom Tabs or Stack for main pages  defines the tabs
 // app/(main)/_layout.tsx
-import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
+import { Tabs } from "expo-router";
 
 export default function MainLayout() {
   return (
@@ -22,6 +22,7 @@ export default function MainLayout() {
         },
       })}
     >
+      {/* Home, Order, Location and Profile */}
       <Tabs.Screen name="index" options={{ title: "Home" }} />
       <Tabs.Screen name="cart" options={{ title: "Cart" }} />
       <Tabs.Screen name="payment" options={{ title: "Payment" }} />

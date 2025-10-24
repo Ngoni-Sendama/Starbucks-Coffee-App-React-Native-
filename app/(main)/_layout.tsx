@@ -1,4 +1,3 @@
-//  Bottom Tabs or Stack for main pages  defines the tabs
 // app/(main)/_layout.tsx
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
@@ -9,7 +8,7 @@ export default function MainLayout() {
       screenOptions={({ route }) => ({
         headerShown: false,
         tabBarShowLabel: true,
-        tabBarActiveTintColor: "#006241", // Starbucks green
+        tabBarActiveTintColor: "#006241",
         tabBarInactiveTintColor: "#888",
         tabBarIcon: ({ color, size }) => {
           let iconName: keyof typeof Ionicons.glyphMap = "home";
@@ -22,7 +21,7 @@ export default function MainLayout() {
         },
       })}
     >
-      {/* Home, Order, Location and Profile */}
+      {/* Only these three are tabs */}
       <Tabs.Screen name="index" options={{ title: "Home" }} />
       <Tabs.Screen name="cart" options={{ title: "Cart" }} />
       <Tabs.Screen name="payment" options={{ title: "Payment" }} />
